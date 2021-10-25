@@ -22,12 +22,16 @@ public class Review implements Serializable {
 	private int idp;
 	
 	private String name;
-	
+
+	private String email;
+
 	//@Column(unique=true)
 	private String content;
 
 	private boolean isActif;
-	
+
+
+
 	@Enumerated(EnumType.STRING)
 	//@NotNull
 	private Rating rating;
@@ -55,11 +59,11 @@ public class Review implements Serializable {
 		this.id = id;
 	}
 
-	public int getTitle() {
+	public int getIdp() {
 		return idp;
 	}
 
-	public void setTitle(int idp) {
+	public void setIdp(int idp) {
 		this.idp = idp;
 	}
 
@@ -69,6 +73,13 @@ public class Review implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getContent() {
